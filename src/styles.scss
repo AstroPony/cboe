@@ -1,0 +1,205 @@
+// Variables
+$grid-columns: 12;
+$grid-gap: 1rem;
+
+// Colors
+$color-prime: #e1e1e1;
+$color-secondary: #c7bda5;
+$color-tertiary: #5c5f7c;
+$color-accent: #404472;
+$color-distort: #191c40;
+
+body {
+  background-color: #ddd;
+  margin: 3rem;
+  color: $color-tertiary;
+}
+
+.page-border {
+  font-size: 16px;
+  width: 100%;
+  min-height: 40px;
+  margin-top: -8px;
+  position: relative;
+  background: white;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.15);
+  transition: all .4s ease;
+  cursor: pointer;
+
+  &:hover {
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
+    box-shadow: 5px 5px rgba(0, 0, 0, .25);
+  }
+}
+
+body {
+  background-color: $color-prime;
+}
+
+button {
+  font-family: inherit;
+}
+
+// Grid container
+.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $grid-gap;
+  padding-right: $grid-gap;
+  padding-bottom: $grid-gap;
+  margin-bottom: 5%;
+  position: relative;
+  background: white;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+}
+
+h1 {
+  color: $color-accent;
+}
+
+// Grid columns
+.col {
+  flex: 1 0 0%;
+  margin-left: $grid-gap;
+  margin-right: $grid-gap;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-header,
+.grid-row {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  padding: 8px;
+  border-bottom: 1px solid lightgray;
+
+  .grid-item {
+    flex: 1 1 15%;
+    padding: 8px;
+
+    &.buttons {
+      display: flex;
+      justify-content: flex-end;
+
+      button {
+        font-size: 14px;
+        width: 10%;
+        min-height: 30px;
+        position: relative;
+        background: white;
+        border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+        box-shadow: 10px 10px rgba(0, 0, 0, 0.15);
+        transition: all .4s ease;
+        margin-right: 20px;
+        cursor: pointer;
+
+        &:hover {
+          border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
+          box-shadow: 5px 5px rgba(0, 0, 0, .25);
+        }
+      }
+    }
+
+    &:last-child > button {
+      float: right;
+    }
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &.inner {
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &.detail {
+    margin: 16px 0;
+    padding: 16px;
+    border: 1px dashed #fff;
+    background-color: #efefef;
+    align-items: flex-end;
+    transition: append-animate .4s linear;
+
+    .detailInput {
+      min-height: 30px;
+      padding-left: 8px;
+    }
+  }
+}
+
+.grid-header {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.searchContainer {
+  align-self: center;
+
+  .searchInput {
+    float: right;
+    font-size: 16px;
+    width: 50%;
+    min-height: 40px;
+    position: relative;
+    background: white;
+    padding-left: 15px;
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.15);
+    transition: all .4s ease;
+  }
+}
+
+.newProduct {
+  max-width: 275px;
+  margin-top: 16px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+// Responsive grid columns
+@media (min-width: 576px) {
+  .col-sm {
+    flex-basis: calc(100% / $grid-columns * 6);
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md {
+    flex-basis: calc(100% / $grid-columns * 8);
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg {
+    flex-basis: calc(100% / $grid-columns * 10);
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-xl {
+    flex-basis: calc(100% / $grid-columns * 12);
+  }
+}
+
+///// Keyframes for Animations
+
+@keyframes append-animate {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
