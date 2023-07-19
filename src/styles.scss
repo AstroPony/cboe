@@ -169,25 +169,25 @@ h1 {
 // Responsive grid columns
 @media (min-width: 576px) {
   .col-sm {
-    flex-basis: calc(100% / $grid-columns * 6);
+    flex-basis: calc(100% / #{$grid-columns} * 6);
   }
 }
 
 @media (min-width: 768px) {
   .col-md {
-    flex-basis: calc(100% / $grid-columns * 8);
+    flex-basis: calc(100% / #{$grid-columns} * 8);
   }
 }
 
 @media (min-width: 992px) {
   .col-lg {
-    flex-basis: calc(100% / $grid-columns * 10);
+    flex-basis: calc(100% / #{$grid-columns} * 10);
   }
 }
 
 @media (min-width: 1200px) {
   .col-xl {
-    flex-basis: calc(100% / $grid-columns * 12);
+    flex-basis: calc(100% / #{$grid-columns} * 12);
   }
 }
 

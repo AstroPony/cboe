@@ -9,7 +9,6 @@ const Overview = () => {
     const [selectedProductId, setSelectedProductId] = useState('');
     const [isEditing, setIsEditing] = useState(false);
     const [filterText, setFilterText] = useState('');
-    const [isModalOpen, setIsModalOpen] = useState(false);
     const [filteredProductList, setFilteredProductList] = useState([]);
     const [isNewProductModalOpen, setIsNewProductModalOpen] = useState(false);
 
