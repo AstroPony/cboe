@@ -1,0 +1,9 @@
+/* font.css */
+@font-face {
+  font-family: 'Mechanical';
+  src: url('./assets/fonts/Mechanical-g5Y5.otf') format('truetype');
+}
+
+body {
+  font-family: 'Mechanical', sans-serif;
+}
